@@ -1,5 +1,6 @@
 import React from 'react'
 import { useFecth } from '../hooks/useFetch'
+import { CoffeeCard } from './CoffeeCard';
 
 export const CoffeeList = () => {
 
@@ -9,7 +10,7 @@ export const CoffeeList = () => {
 
     return (
         <div>
-            <h2>Our Collection</h2>
+            <CoffeeCard data={data} />
         </div>
     )
 }
