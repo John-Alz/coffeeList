@@ -11,7 +11,8 @@ export const useFecth = (url) => {
         try {
             const resp = await fetch(url)
             const data = await resp.json();
-            setDataCoffe(data)
+            setDataCoffe(data);
+            setLoading(false)
         } catch (error) {
             throw new Error("Error", error);
         }
