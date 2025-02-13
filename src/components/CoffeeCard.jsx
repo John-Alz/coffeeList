@@ -3,7 +3,6 @@ import star from '../assets/Star_fill.svg'
 import emptyStar from '../assets/Star.svg'
 
 export const CoffeeCard = ({ data }) => {
-    console.log(data);
 
     return (
         <article className='text-white w-card flex flex-col gap-3'>

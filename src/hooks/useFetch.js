@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react"
 
 export const useFecth = (url) => {
-    const [dataCoffe, setDataCoffe] = useState([]);
+    const [dataCoffee, setDataCoffe] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
 
@@ -24,7 +24,7 @@ export const useFecth = (url) => {
     }, [])
 
     return {
-        dataCoffe,
+        dataCoffee,
         loading,
         error
     }

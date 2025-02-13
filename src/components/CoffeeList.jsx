@@ -1,10 +1,13 @@
 import React from 'react'
 import { useFecth } from '../hooks/useFetch'
 import { CoffeeCard } from './CoffeeCard';
+import { useContext } from 'react';
+import { CoffeeContext } from '../context/coffeeContext';
 
 export const CoffeeList = () => {
 
-    const { dataCoffe, loading } = useFecth('https://raw.githubusercontent.com/devchallenges-io/curriculum/refs/heads/main/4-frontend-libaries/challenges/group_1/data/simple-coffee-listing-data.json');
+    const { dataCoffee, loading } = useContext(CoffeeContext);
+
 
     return (
         <>
@@ -14,7 +17,7 @@ export const CoffeeList = () => {
             <div className='w-[80%] m-auto grid grid-cols-3 gap-y-10'>
 
                 {
-                    dataCoffe.map((coffe) => (
+                    dataCoffee?.map((coffe) => (
                         <>
                             <CoffeeCard key={coffe.id} data={coffe} />
                         </>
