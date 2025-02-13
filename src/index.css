@@ -7,4 +7,9 @@
   --color-secondary: #111315;
   --color-grayV1: #6F757C;
   --color-grayV2: #4D5562;
+  --color-green: #BEE3CC;
+  --color-yellow: #F6C768;
+  --color-red: #ED735D;
+  --spacing-card: 260px;
+  --text-tiny: .8rem;
 }
