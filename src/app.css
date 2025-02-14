@@ -21,3 +21,8 @@
     }
 }
 
+@media (max-width: 768px) {
+    .main {
+        height: 300vh;
+    }
+}
