@@ -1,0 +1,27 @@
+
+.main {
+    height: 200vh;
+    background: #111315;
+}
+
+.main::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url('src/assets/bg-cafe-lg.jpg');
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 1024px) {
+    .main::before {
+        background: url('src/assets/bg-cafe.jpg');
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        height: 320vh;
+    }
+}

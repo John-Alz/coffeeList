@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { useState } from "react"
 
 export const useFecth = (url, dispatch) => {
     const fetchData = async () => {
