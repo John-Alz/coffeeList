@@ -1,7 +1,6 @@
 import React from 'react'
 import { CoffeeList } from './components/CoffeeList'
 import { CoffeeHeader } from './components/CoffeeHeader'
-import bgCoffe from './assets/bg-cafe-lg.jpg'
 import { CoffeeProvider } from './context/CoffeeProvider'
 import { FilterButtons } from './components/FilterButtons'
 import './app.css'
