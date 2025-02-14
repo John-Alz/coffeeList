@@ -8,15 +8,20 @@
 .main::before {
     content: "";
     position: absolute;
-    height: 100%;
+    top: 0;
+    left: 0;
+    display: inline-block;
     width: 100%;
-    background: url('/bg-cafe-lg.jpg');
+    height: 18.75rem;
+    background-image: url('/bg-cafe-lg.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: top center;
 }
 
 @media (max-width: 1024px) {
     .main::before {
-        background: url('/bg-cafe.jpg');
+        background: url('/bg-cafe-sm.jpg');
         background-repeat: no-repeat;
     }
 }
