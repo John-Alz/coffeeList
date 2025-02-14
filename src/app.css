@@ -1,6 +1,6 @@
 
 .main {
-    height: 200vh;
+    height: 160vh;
     background: #111315;
     position: relative;
 }
@@ -19,15 +19,10 @@
     background-position: top center;
 }
 
-@media (max-width: 1024px) {
-    .main::before {
-        background: url('/bg-cafe-sm.jpg');
-        background-repeat: no-repeat;
-    }
-}
+
 
 @media (max-width: 768px) {
     .main {
-        height: 300vh;
+        height: 290vh;
     }
 }
