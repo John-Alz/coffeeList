@@ -1,23 +1,30 @@
 import React from 'react'
-import { useFecth } from '../hooks/useFetch'
 import { CoffeeCard } from './CoffeeCard';
+import { useFecth } from '../hooks/useFetch';
+import { FilterButtons } from './FilterButtons';
+import { useReducer } from 'react';
+import { coffeesReducer } from './coffeesReducer';
 import { useContext } from 'react';
-import { CoffeeContext } from '../context/coffeeContext';
+import { CoffeeContext } from '../context/CoffeeContext';
+
 
 export const CoffeeList = () => {
 
-    const { dataCoffee, loading } = useContext(CoffeeContext);
+    const [state, dispatch] = useContext(CoffeeContext)
+
+    useFecth('https://raw.githubusercontent.com/devchallenges-io/curriculum/refs/heads/main/4-frontend-libaries/challenges/group_1/data/simple-coffee-listing-data.json', dispatch)
 
 
     return (
         <>
+            <FilterButtons />
             {
-                loading && <h2 className='text-4xl text-white text-center font-bold'>Cargando...</h2>
+                state.loading && <h2 className='text-4xl text-white text-center font-bold'>Cargando...</h2>
             }
             <div className='w-[80%] m-auto grid grid-cols-3 gap-y-10'>
 
                 {
-                    dataCoffee?.map((coffe) => (
+                    state.coffees.map((coffe) => (
                         <>
                             <CoffeeCard key={coffe.id} data={coffe} />
                         </>

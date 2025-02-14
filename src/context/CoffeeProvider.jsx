@@ -1,15 +1,19 @@
-import React from 'react'
-import { CoffeeContext } from './coffeeContext'
-import { useFecth } from '../hooks/useFetch'
+import { useReducer } from "react"
+import { CoffeeContext } from "./CoffeeContext"
+import { coffeesReducer } from "../components/coffeesReducer"
+
+const initialState = {
+    coffees: [],
+    allCoffees: [],
+    loading: true
+}
 
 export const CoffeeProvider = ({ children }) => {
 
-    const { dataCoffee, loading } = useFecth('https://raw.githubusercontent.com/devchallenges-io/curriculum/refs/heads/main/4-frontend-libaries/challenges/group_1/data/simple-coffee-listing-data.json');
-
-
+    const [state, dispatch] = useReducer(coffeesReducer, initialState)
 
     return (
-        <CoffeeContext.Provider value={{ dataCoffee, loading }}>
+        <CoffeeContext.Provider value={[state, dispatch]}>
             {children}
         </CoffeeContext.Provider>
     )
