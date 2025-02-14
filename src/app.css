@@ -10,13 +10,13 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    background: url('public/bg-cafe-lg.jpg');
+    background: url('/bg-cafe-lg.jpg');
     background-repeat: no-repeat;
 }
 
 @media (max-width: 1024px) {
     .main::before {
-        background: url('public/bg-cafe.jpg');
+        background: url('/bg-cafe.jpg');
         background-repeat: no-repeat;
     }
 }
