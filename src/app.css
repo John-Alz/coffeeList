@@ -2,6 +2,7 @@
 .main {
     height: 200vh;
     background: #111315;
+    position: relative;
 }
 
 .main::before {
